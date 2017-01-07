@@ -1,0 +1,48 @@
+.App * {
+  box-sizing: border-box;
+}
+
+.App {
+  padding-top: 10px;
+  display: flex;
+  font-size: 20px;
+  line-height: 30px;
+  flex-direction: column;
+  flex: 1;
+}
+
+.Row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+
+.Span1 {
+  display: flex;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.FormControls {
+  width: 100%;
+}
+
+.FormControls > label {
+  display: block;
+  color: #999;
+}
+
+.FormControls > .Control {
+  display: block;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  height: 30px;
+}
+
+.FormControls > .Control[readonly] {
+  background-color: whitesmoke;
+}
