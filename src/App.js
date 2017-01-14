@@ -32,7 +32,7 @@ class App extends Component {
           <div className="Span1">
             <div className="FormControls">
               <label>Weight: Pounds</label>
-              <input type="tel" min="0" step=".1" value={this.state.weight} onChange={(e) => this.setState({weight: e.target.value})} className="Control" />
+              <input type="tel" value={this.state.weight} onChange={(e) => this.setState({weight: e.target.value})} className="Control" />
             </div>
           </div>
         </div>
@@ -41,14 +41,14 @@ class App extends Component {
           <div className="Span1">
             <div className="FormControls">
               <label>Height: Feet</label>
-              <input type="tel" min="0" max="8" value={this.state.heightFeet} onChange={(e) => this.setState({heightFeet: e.target.value})} className="Control" />
+              <input type="tel" value={this.state.heightFeet} onChange={(e) => this.setState({heightFeet: e.target.value})} className="Control" />
             </div>
           </div>
 
           <div className="Span1">
             <div className="FormControls">
               <label>Height: Inches</label>
-              <input type="tel" min="0" max="12" value={this.state.heightInches} onChange={(e) => this.setState({heightInches: e.target.value})} className="Control"/>
+              <input type="tel" value={this.state.heightInches} onChange={(e) => this.setState({heightInches: e.target.value})} className="Control"/>
             </div>
           </div>
         </div>
