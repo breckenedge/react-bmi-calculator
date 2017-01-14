@@ -3,6 +3,8 @@ BMI Calculator
 
 Just a React-based JavaScript BMI calculator.
 
+[Preview](https://depressed-eggs.surge.sh)
+
 Deployment
 ----------
 
