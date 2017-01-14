@@ -31,7 +31,7 @@ class App extends Component {
         <div className="Row">
           <div className="Span1">
             <div className="FormControls">
-              <label>Weight: Pounds</label>
+              <label>Weight <small>Pounds</small></label>
               <input type="tel" value={this.state.weight} onChange={(e) => this.setState({weight: e.target.value})} className="Control" />
             </div>
           </div>
@@ -40,14 +40,14 @@ class App extends Component {
         <div className="Row">
           <div className="Span1">
             <div className="FormControls">
-              <label>Height: Feet</label>
+              <label>Height <small>Feet</small></label>
               <input type="tel" value={this.state.heightFeet} onChange={(e) => this.setState({heightFeet: e.target.value})} className="Control" />
             </div>
           </div>
 
           <div className="Span1">
             <div className="FormControls">
-              <label>Height: Inches</label>
+              <label><small>Inches</small></label>
               <input type="tel" value={this.state.heightInches} onChange={(e) => this.setState({heightInches: e.target.value})} className="Control"/>
             </div>
           </div>
