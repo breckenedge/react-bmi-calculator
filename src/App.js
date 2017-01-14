@@ -21,8 +21,21 @@ class App extends Component {
 
   bmi() {
     let w = parseFloat(this.state.weight);
-    let h = parseFloat(this.state.heightFeet) * 12 + parseFloat(this.state.heightInches);
-    return Math.round((w / Math.pow(h, 2)) * 7030) / 10;
+    let f = parseFloat(this.state.heightFeet);
+    let i = parseFloat(this.state.heightInches);
+
+    // Gracefully handle invalid values;
+    w = isNaN(w) ? 0 : w;
+    f = isNaN(f) ? 0 : f;
+    i = isNaN(i) ? 0 : i;
+
+    let h = f * 12 + i;
+    let bmi = Math.round((w / Math.pow(h, 2)) * 7030) / 10;
+    if (isNaN(bmi) || !isFinite(bmi) || bmi === 0) {
+      return '';
+    } else {
+      return bmi;
+    }
   }
 
   render() {
@@ -57,7 +70,7 @@ class App extends Component {
           <div className="Span1">
             <div className="FormControls">
               <label>BMI</label>
-              <input type="number" value={this.bmi()} readOnly className="Control" />
+              <input value={this.bmi()} readOnly className="Control" />
             </div>
           </div>
         </div>
